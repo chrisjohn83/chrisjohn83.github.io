@@ -3,664 +3,506 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- SEO / AEO Meta Tags -->
-  <title>Christuraj Johnjoseph | Senior Technical Writer — SaaS, API & SDK Documentation</title>
-  <meta name="description" content="Christu Raj is a senior technical writer with 15+ years of experience in SaaS documentation, API & SDK docs, content strategy, information architecture, Doc-as-Code, and SEO/AEO-optimised content." />
-  <meta name="keywords" content="technical writer, SaaS documentation, API documentation, SDK documentation, content strategy, information architecture, Doc-as-Code, SEO, AEO, user journey" />
   <meta name="author" content="Christu Raj" />
+  <meta name="description" content="Christu Raj is a senior technical writer with 15+ years of experience in SaaS documentation, API &amp; SDK docs, content strategy, information architecture, Doc-as-Code, and SEO/AEO-optimised content." />
+  <meta name="keywords" content="technical writer, SaaS documentation, API documentation, SDK documentation, content strategy, information architecture, Doc-as-Code, SEO, AEO, user journey" />
   <meta name="robots" content="index, follow" />
-
-  <!-- Open Graph (social sharing) -->
   <meta property="og:title" content="Christuraj Johnjoseph | Senior Technical Writer" />
   <meta property="og:description" content="15+ years turning complex SaaS, API, and SDK products into clear, user-centred documentation. Available for technical writing, content strategy, and IA consulting." />
   <meta property="og:type" content="website" />
-
-  <!-- Structured Data (AEO — AI & search engine readable) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Christuraj Johnjoseph",
-    "jobTitle": "Senior Technical Writer",
-    "description": "Technical writer with 15+ years of experience specialising in SaaS, API & SDK documentation, content strategy, information architecture, and Doc-as-Code workflows.",
-    "knowsAbout": [
-      "SaaS Technical Documentation",
-      "API Documentation",
-      "SDK Documentation",
-      "Content Strategy",
-      "Information Architecture",
-      "Doc-as-Code",
-      "SEO",
-      "AEO",
-      "User Journey Mapping",
-      "Technical Gap Analysis"
-    ],
-    "url": "https://chrisjohn83.github.io"
-  }
-  </script>
-
+  <title>Christuraj Johnjoseph | Senior Technical Writer — SaaS, API &amp; SDK Documentation</title>
   <style>
     /* ── Reset & Base ── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --clr-bg:        #f9fafb;
-      --clr-surface:   #ffffff;
-      --clr-primary:   #1a56db;
-      --clr-primary-d: #1e429f;
-      --clr-accent:    #0ea5e9;
-      --clr-text:      #111827;
-      --clr-muted:     #6b7280;
-      --clr-border:    #e5e7eb;
-      --clr-tag-bg:    #eff6ff;
-      --clr-tag-text:  #1d4ed8;
-      --radius:        10px;
-      --shadow-sm:     0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.05);
-      --shadow-md:     0 4px 12px rgba(0,0,0,.10);
-      --font-sans:     'Segoe UI', system-ui, -apple-system, sans-serif;
-      --max-w:         1100px;
-    }
-
     html { scroll-behavior: smooth; }
-
     body {
-      font-family: var(--font-sans);
-      background: var(--clr-bg);
-      color: var(--clr-text);
-      line-height: 1.65;
-      font-size: 1rem;
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: #0f1117;
+      color: #e2e8f0;
+      line-height: 1.7;
     }
-
-    a { color: var(--clr-primary); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-
-    /* ── Layout helpers ── */
-    .container { max-width: var(--max-w); margin: 0 auto; padding: 0 1.5rem; }
-    section { padding: 5rem 0; }
+    a { color: inherit; text-decoration: none; }
 
     /* ── Nav ── */
     nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(255,255,255,0.92);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid var(--clr-border);
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1rem 2rem;
+      background: rgba(15,17,23,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.07);
     }
-
-    .nav-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      max-width: var(--max-w);
-      margin: 0 auto;
-      padding: 0.9rem 1.5rem;
+    .nav-brand {
+      font-size: 1.2rem; font-weight: 700;
+      background: linear-gradient(135deg, #818cf8, #34d399);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
     }
-
-    .nav-logo {
-      font-weight: 700;
-      font-size: 1.05rem;
-      color: var(--clr-text);
-      letter-spacing: -0.02em;
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a {
+      font-size: 0.9rem; color: #94a3b8; transition: color .2s;
     }
-
-    .nav-logo span { color: var(--clr-primary); }
-
-    .nav-links { display: flex; gap: 1.8rem; list-style: none; }
-    .nav-links a { color: var(--clr-muted); font-size: 0.9rem; font-weight: 500; transition: color .2s; }
-    .nav-links a:hover { color: var(--clr-primary); text-decoration: none; }
+    .nav-links a:hover { color: #e2e8f0; }
 
     /* ── Hero ── */
-    #hero {
-      background: linear-gradient(135deg, #1e3a8a 0%, #1a56db 50%, #0ea5e9 100%);
-      color: #fff;
-      padding: 6.5rem 0 5.5rem;
-      position: relative;
-      overflow: hidden;
+    .hero {
+      min-height: 100vh;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 6rem 2rem 4rem;
+      background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(99,102,241,0.18) 0%, transparent 70%);
     }
-
-    #hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-      pointer-events: none;
+    .badge {
+      display: inline-block; margin-bottom: 1.5rem;
+      padding: .35rem 1rem; border-radius: 999px;
+      background: rgba(52,211,153,0.12); border: 1px solid rgba(52,211,153,0.3);
+      font-size: .8rem; font-weight: 600; color: #34d399; letter-spacing: .05em;
     }
-
-    .hero-badge {
-      display: inline-block;
-      background: rgba(255,255,255,0.15);
-      border: 1px solid rgba(255,255,255,0.3);
-      border-radius: 999px;
-      padding: 0.3rem 0.9rem;
-      font-size: 0.8rem;
-      font-weight: 600;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      margin-bottom: 1.2rem;
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 800; line-height: 1.15; max-width: 760px; margin-bottom: 1.25rem;
+      color: #f1f5f9;
     }
-
-    .hero-title {
-      font-size: clamp(2.2rem, 5vw, 3.4rem);
-      font-weight: 800;
-      letter-spacing: -0.03em;
-      line-height: 1.15;
-      margin-bottom: 1.1rem;
-      max-width: 720px;
+    .hero h1 em { font-style: normal; color: #818cf8; }
+    .hero p {
+      font-size: 1.1rem; color: #94a3b8; max-width: 580px; margin-bottom: 2.5rem;
     }
-
-    .hero-title em {
-      font-style: normal;
-      color: #bfdbfe;
-    }
-
-    .hero-sub {
-      font-size: 1.1rem;
-      color: rgba(255,255,255,0.85);
-      max-width: 580px;
-      margin-bottom: 2.2rem;
-      line-height: 1.75;
-    }
-
-    .hero-cta-group { display: flex; gap: 1rem; flex-wrap: wrap; }
-
+    .btn-group { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
     .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.45rem;
-      padding: 0.7rem 1.5rem;
-      border-radius: var(--radius);
-      font-weight: 600;
-      font-size: 0.92rem;
-      transition: all .2s;
-      cursor: pointer;
-      border: 2px solid transparent;
+      padding: .75rem 1.75rem; border-radius: 8px; font-size: .95rem;
+      font-weight: 600; cursor: pointer; transition: all .2s;
     }
-
-    .btn-white {
-      background: #fff;
-      color: var(--clr-primary-d);
+    .btn-primary {
+      background: linear-gradient(135deg, #6366f1, #8b5cf6);
+      color: #fff; border: none;
+      box-shadow: 0 4px 20px rgba(99,102,241,0.35);
     }
-    .btn-white:hover { background: #e0f2fe; text-decoration: none; }
-
-    .btn-outline-white {
-      background: transparent;
-      border-color: rgba(255,255,255,0.6);
-      color: #fff;
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 28px rgba(99,102,241,0.45); }
+    .btn-outline {
+      background: transparent; color: #e2e8f0;
+      border: 1px solid rgba(255,255,255,0.18);
     }
-    .btn-outline-white:hover { background: rgba(255,255,255,0.12); text-decoration: none; }
+    .btn-outline:hover { background: rgba(255,255,255,0.06); }
 
-    .hero-stats {
-      display: flex;
-      gap: 2.5rem;
-      margin-top: 3.5rem;
-      flex-wrap: wrap;
+    /* ── Stats Bar ── */
+    .stats {
+      display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center;
+      margin-top: 3.5rem; padding-top: 2.5rem;
+      border-top: 1px solid rgba(255,255,255,0.08);
     }
+    .stat { text-align: center; }
+    .stat .value { font-size: 1.5rem; font-weight: 700; color: #818cf8; display: block; }
+    .stat .label { font-size: .8rem; color: #64748b; }
 
-    .hero-stat-item { text-align: left; }
-
-    .hero-stat-number {
-      font-size: 2rem;
-      font-weight: 800;
-      color: #fff;
-      line-height: 1;
+    /* ── Section Wrapper ── */
+    section { padding: 5rem 2rem; }
+    .container { max-width: 1100px; margin: 0 auto; }
+    .section-tag {
+      display: inline-block; margin-bottom: .75rem;
+      font-size: .75rem; font-weight: 700; letter-spacing: .1em;
+      color: #818cf8; text-transform: uppercase;
     }
-
-    .hero-stat-label {
-      font-size: 0.8rem;
-      color: rgba(255,255,255,0.7);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-top: 0.25rem;
-    }
-
-    /* ── Section label ── */
-    .section-label {
-      display: inline-block;
-      background: var(--clr-tag-bg);
-      color: var(--clr-tag-text);
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding: 0.3rem 0.8rem;
-      border-radius: 999px;
-      margin-bottom: 0.8rem;
-    }
-
-    .section-heading {
+    .section-title {
       font-size: clamp(1.6rem, 3vw, 2.2rem);
-      font-weight: 800;
-      letter-spacing: -0.025em;
-      line-height: 1.25;
-      margin-bottom: 0.6rem;
+      font-weight: 800; color: #f1f5f9; margin-bottom: .75rem;
     }
+    .section-sub { color: #64748b; max-width: 560px; margin-bottom: 3rem; }
 
-    .section-sub {
-      color: var(--clr-muted);
-      font-size: 1rem;
-      max-width: 560px;
-      margin-bottom: 3rem;
-    }
-
-    /* ── About strip ── */
-    #about {
-      background: var(--clr-surface);
-      border-top: 1px solid var(--clr-border);
-      border-bottom: 1px solid var(--clr-border);
-      padding: 3.5rem 0;
-    }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      gap: 3rem;
-      align-items: center;
-    }
-
+    /* ── About ── */
+    #about { background: #0f1117; }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
     .about-avatar {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--clr-primary), var(--clr-accent));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2.8rem;
-      font-weight: 800;
-      color: #fff;
-      margin-bottom: 1rem;
+      width: 90px; height: 90px; border-radius: 50%;
+      background: linear-gradient(135deg, #6366f1, #34d399);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.6rem; font-weight: 800; color: #fff;
+      margin-bottom: 1.25rem;
     }
-
-    .about-name { font-size: 1.4rem; font-weight: 700; margin-bottom: 0.2rem; }
-    .about-role { color: var(--clr-primary); font-weight: 600; font-size: 0.95rem; }
-
-    .about-copy { font-size: 0.97rem; color: #374151; line-height: 1.8; }
+    .about-text h3 { font-size: 1.25rem; font-weight: 700; color: #f1f5f9; margin-bottom: .25rem; }
+    .about-text .role { font-size: .9rem; color: #818cf8; margin-bottom: 1.25rem; }
+    .about-text p { color: #94a3b8; margin-bottom: 1rem; }
+    .about-text p strong { color: #e2e8f0; }
+    @media (max-width: 700px) { .about-grid { grid-template-columns: 1fr; } }
 
     /* ── Skills ── */
-    #skills { background: var(--clr-bg); }
-
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 1.5rem;
-    }
-
+    #skills { background: #0c0e14; }
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; }
     .skill-card {
-      background: var(--clr-surface);
-      border: 1px solid var(--clr-border);
-      border-radius: var(--radius);
-      padding: 1.6rem;
-      transition: box-shadow .25s, transform .25s;
-      position: relative;
+      background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 14px; padding: 1.5rem; transition: border-color .2s, transform .2s;
     }
-
-    .skill-card:hover {
-      box-shadow: var(--shadow-md);
-      transform: translateY(-3px);
-    }
-
-    .skill-icon {
-      width: 44px;
-      height: 44px;
-      border-radius: 10px;
-      background: var(--clr-tag-bg);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.3rem;
-      margin-bottom: 1rem;
-    }
-
-    .skill-card h3 {
-      font-size: 1rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-      color: var(--clr-text);
-    }
-
-    .skill-card p {
-      font-size: 0.875rem;
-      color: var(--clr-muted);
-      line-height: 1.65;
-    }
-
-    .skill-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-      margin-top: 1rem;
-    }
-
+    .skill-card:hover { border-color: rgba(129,140,248,0.35); transform: translateY(-3px); }
+    .skill-icon { font-size: 2rem; margin-bottom: .75rem; }
+    .skill-card h3 { font-size: 1rem; font-weight: 700; color: #f1f5f9; margin-bottom: .5rem; }
+    .skill-card p { font-size: .875rem; color: #94a3b8; margin-bottom: 1rem; }
+    .tags { display: flex; flex-wrap: wrap; gap: .4rem; }
     .tag {
-      background: var(--clr-tag-bg);
-      color: var(--clr-tag-text);
-      font-size: 0.72rem;
-      font-weight: 600;
-      padding: 0.2rem 0.6rem;
-      border-radius: 999px;
+      padding: .25rem .65rem; border-radius: 999px; font-size: .73rem; font-weight: 600;
+      background: rgba(99,102,241,0.15); color: #818cf8;
+      border: 1px solid rgba(99,102,241,0.25);
     }
 
-    /* ── Expertise Bar section ── */
-    #expertise {
-      background: var(--clr-surface);
-      border-top: 1px solid var(--clr-border);
-    }
-
-    .expertise-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-      gap: 1.2rem;
-    }
-
+    /* ── Expertise ── */
+    #expertise { background: #0f1117; }
+    .expertise-grid { display: flex; flex-wrap: wrap; gap: .75rem; }
     .expertise-item {
-      padding: 1.2rem 1.4rem;
-      border: 1px solid var(--clr-border);
-      border-left: 4px solid var(--clr-primary);
-      border-radius: 0 var(--radius) var(--radius) 0;
-      background: var(--clr-bg);
+      padding: .6rem 1.2rem; border-radius: 8px; font-size: .875rem;
+      background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+      color: #cbd5e1; transition: all .2s;
+    }
+    .expertise-item:hover {
+      background: rgba(99,102,241,0.1); border-color: rgba(99,102,241,0.3);
+      color: #a5b4fc;
     }
 
-    .expertise-item span {
-      font-size: 0.88rem;
-      font-weight: 600;
-      color: var(--clr-text);
+    /* ── Projects ── */
+    #projects { background: #0c0e14; }
+    .projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; }
+    .project-card {
+      background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 16px; overflow: hidden; transition: border-color .2s, transform .2s;
+      display: flex; flex-direction: column;
     }
-
-    /* ── CTA banner ── */
-    #cta {
-      background: linear-gradient(135deg, #1e3a8a, #1a56db);
+    .project-card:hover { border-color: rgba(52,211,153,0.35); transform: translateY(-4px); }
+    .project-header {
+      padding: 1.5rem 1.5rem 1rem;
+      background: linear-gradient(135deg, rgba(99,102,241,0.12), rgba(52,211,153,0.08));
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .project-icon { font-size: 2rem; margin-bottom: .6rem; display: block; }
+    .project-type {
+      font-size: .7rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+      color: #34d399; margin-bottom: .4rem;
+    }
+    .project-card h3 { font-size: 1.05rem; font-weight: 700; color: #f1f5f9; }
+    .project-body { padding: 1.25rem 1.5rem; flex: 1; }
+    .project-body p { font-size: .875rem; color: #94a3b8; margin-bottom: 1rem; }
+    .project-tags { display: flex; flex-wrap: wrap; gap: .4rem; margin-bottom: 1.2rem; }
+    .project-tag {
+      padding: .2rem .6rem; border-radius: 999px; font-size: .72rem; font-weight: 600;
+      background: rgba(52,211,153,0.1); color: #34d399;
+      border: 1px solid rgba(52,211,153,0.2);
+    }
+    .project-features { list-style: none; margin-bottom: 1.25rem; }
+    .project-features li {
+      font-size: .82rem; color: #94a3b8; padding: .2rem 0;
+      padding-left: 1.1rem; position: relative;
+    }
+    .project-features li::before {
+      content: '›'; position: absolute; left: 0; color: #818cf8; font-weight: 700;
+    }
+    .project-footer {
+      padding: 1rem 1.5rem; border-top: 1px solid rgba(255,255,255,0.06);
+      display: flex; gap: .75rem;
+    }
+    .project-btn {
+      flex: 1; text-align: center; padding: .55rem 1rem; border-radius: 7px;
+      font-size: .82rem; font-weight: 600; transition: all .2s;
+    }
+    .project-btn-primary {
+      background: linear-gradient(135deg, #6366f1, #8b5cf6);
       color: #fff;
-      padding: 4.5rem 0;
+    }
+    .project-btn-primary:hover { opacity: .88; transform: translateY(-1px); }
+    .project-btn-outline {
+      border: 1px solid rgba(255,255,255,0.14); color: #94a3b8;
+    }
+    .project-btn-outline:hover { background: rgba(255,255,255,0.06); color: #e2e8f0; }
+
+    /* ── CTA ── */
+    #cta {
+      background: radial-gradient(ellipse 80% 80% at 50% 50%, rgba(99,102,241,0.14) 0%, transparent 70%);
       text-align: center;
     }
-
-    #cta h2 {
-      font-size: clamp(1.6rem, 3vw, 2.2rem);
-      font-weight: 800;
-      margin-bottom: 0.8rem;
-      letter-spacing: -0.02em;
-    }
-
-    #cta p {
-      color: rgba(255,255,255,0.8);
-      font-size: 1rem;
-      margin-bottom: 2rem;
-      max-width: 480px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .cta-links {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
+    #cta h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; color: #f1f5f9; margin-bottom: .75rem; }
+    #cta p { color: #64748b; max-width: 500px; margin: 0 auto 2rem; }
+    .cta-btns { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
 
     /* ── Footer ── */
     footer {
-      background: #111827;
-      color: rgba(255,255,255,0.6);
-      padding: 2rem 0;
-      text-align: center;
-      font-size: 0.85rem;
+      text-align: center; padding: 1.5rem 2rem;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      font-size: .8rem; color: #475569;
     }
+    footer strong { color: #64748b; }
+    footer a { color: #818cf8; }
 
-    footer a { color: rgba(255,255,255,0.8); }
-    footer a:hover { color: #fff; }
-
-    /* ── Responsive ── */
-    @media (max-width: 700px) {
-      .about-grid { grid-template-columns: 1fr; }
-      .hero-stats { gap: 1.5rem; }
-      .nav-links { display: none; }
-    }
+    /* ── Scrollbar ── */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #0f1117; }
+    ::-webkit-scrollbar-thumb { background: #334155; border-radius: 3px; }
   </style>
 </head>
-
 <body>
 
-  <!-- ─────────── NAV ─────────── -->
-  <nav role="navigation" aria-label="Main navigation">
-    <div class="nav-inner">
-      <span class="nav-logo">Christu<span>.</span>Raj</span>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#expertise">Expertise</a></li>
-        <li><a href="#cta">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
+<!-- ── Navigation ── -->
+<nav>
+  <span class="nav-brand">Christu.Raj</span>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#expertise">Expertise</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#cta">Contact</a></li>
+  </ul>
+</nav>
 
-  <!-- ─────────── HERO ─────────── -->
-  <header id="hero" role="banner">
-    <div class="container">
-      <div class="hero-badge">Open to Opportunities</div>
-      <h1 class="hero-title">
-        Turning Complex Products into<br />
-        <em>Clear, Purposeful Documentation</em>
-      </h1>
-      <p class="hero-sub">
-        Senior Technical Writer with 15+ years crafting SaaS, API, and SDK documentation
-        that users actually want to read — structured for both humans and AI.
-      </p>
-      <div class="hero-cta-group">
-        <a href="#skills" class="btn btn-white">Explore My Skills</a>
-        <a href="#cta" class="btn btn-outline-white">Get in Touch</a>
-      </div>
-      <div class="hero-stats">
-        <div class="hero-stat-item">
-          <div class="hero-stat-number">15+</div>
-          <div class="hero-stat-label">Years of Experience</div>
-        </div>
-        <div class="hero-stat-item">
-          <div class="hero-stat-number">SaaS</div>
-          <div class="hero-stat-label">API · SDK · Doc-as-Code</div>
-        </div>
-        <div class="hero-stat-item">
-          <div class="hero-stat-number">IA</div>
-          <div class="hero-stat-label">Content Strategy & Architecture</div>
-        </div>
-        <div class="hero-stat-item">
-          <div class="hero-stat-number">SEO</div>
-          <div class="hero-stat-label">AEO & AI-Readable Content</div>
-        </div>
-      </div>
-    </div>
-  </header>
+<!-- ── Hero ── -->
+<section class="hero">
+  <div class="badge">Open to Opportunities</div>
+  <h1>Turning Complex Products into <em>Clear, Purposeful Documentation</em></h1>
+  <p>Senior Technical Writer with 15+ years crafting SaaS, API, and SDK documentation that users actually want to read — structured for both humans and AI.</p>
+  <div class="btn-group">
+    <a href="#skills" class="btn btn-primary">Explore My Skills</a>
+    <a href="#cta" class="btn btn-outline">Get in Touch</a>
+  </div>
+  <div class="stats">
+    <div class="stat"><span class="value">15+</span><span class="label">Years of Experience</span></div>
+    <div class="stat"><span class="value">SaaS</span><span class="label">API · SDK · Doc-as-Code</span></div>
+    <div class="stat"><span class="value">IA</span><span class="label">Content Strategy &amp; Architecture</span></div>
+    <div class="stat"><span class="value">SEO</span><span class="label">AEO &amp; AI-Readable Content</span></div>
+  </div>
+</section>
 
-  <!-- ─────────── ABOUT ─────────── -->
-  <section id="about" aria-label="About Christu Raj">
-    <div class="container">
-      <div class="about-grid">
-        <div>
-          <div class="about-avatar" aria-hidden="true">CR</div>
-          <div class="about-name">Christu Raj</div>
-          <div class="about-role">Senior Technical Writer</div>
-        </div>
-        <div class="about-copy">
-          <p>
-            I help SaaS teams bridge the gap between complex technology and the people who use it.
-            With over <strong>15 years of experience</strong>, I design documentation ecosystems — not
-            just documents — that guide users from first install through advanced configuration,
-            with zero friction.
-          </p>
-          <br />
-          <p>
-            My work spans <strong>end-user guides, API references, SDK walkthroughs, and
-            Doc-as-Code pipelines</strong> that integrate seamlessly with engineering workflows.
-            I also lead content strategy and information architecture initiatives, identifying
-            technical gaps before they become support tickets.
-          </p>
-          <br />
-          <p>
-            I bring a modern lens to docs: content structured in <strong>semantic chunks</strong>
-            that are optimised for search engines, AI assistants, and human readers alike —
-            aligning with emerging <strong>SEO and AEO best practices</strong>.
-          </p>
-        </div>
+<!-- ── About ── -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div>
+        <span class="section-tag">About</span>
+        <h2 class="section-title">Christu Raj</h2>
+        <p class="section-sub">Senior Technical Writer</p>
+      </div>
+      <div class="about-text">
+        <div class="about-avatar">CR</div>
+        <h3>Christu Raj</h3>
+        <p class="role">Senior Technical Writer</p>
+        <p>I help SaaS teams bridge the gap between complex technology and the people who use it. With over <strong>15 years of experience</strong>, I design documentation ecosystems — not just documents — that guide users from first install through advanced configuration, with zero friction.</p>
+        <p>My work spans <strong>end-user guides, API references, SDK walkthroughs, and Doc-as-Code pipelines</strong> that integrate seamlessly with engineering workflows. I also lead content strategy and information architecture initiatives, identifying technical gaps before they become support tickets.</p>
+        <p>I bring a modern lens to docs: content structured in <strong>semantic chunks</strong> that are optimised for search engines, AI assistants, and human readers alike — aligning with emerging <strong>SEO and AEO best practices</strong>.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ─────────── SKILLS ─────────── -->
-  <section id="skills" aria-label="Core skills">
-    <div class="container">
-      <div class="section-label">Core Skills</div>
-      <h2 class="section-heading">What I Bring to Your Docs</h2>
-      <p class="section-sub">A full-stack approach to documentation — from strategy and architecture down to every sentence.</p>
+<!-- ── Skills ── -->
+<section id="skills">
+  <div class="container">
+    <span class="section-tag">Core Skills</span>
+    <h2 class="section-title">What I Bring to Your Docs</h2>
+    <p class="section-sub">A full-stack approach to documentation — from strategy and architecture down to every sentence.</p>
+    <div class="skills-grid">
 
-      <div class="skills-grid">
-
-        <article class="skill-card" aria-label="SaaS Technical Documentation">
-          <div class="skill-icon" aria-hidden="true">📄</div>
-          <h3>SaaS Technical Documentation</h3>
-          <p>
-            End-to-end documentation for SaaS products: installation guides, configuration walkthroughs,
-            feature references, and release notes — written for real users, not internal developers.
-          </p>
-          <div class="skill-tags">
-            <span class="tag">Install Guides</span>
-            <span class="tag">Config Docs</span>
-            <span class="tag">Feature Docs</span>
-            <span class="tag">Release Notes</span>
-          </div>
-        </article>
-
-        <article class="skill-card" aria-label="API and SDK Documentation">
-          <div class="skill-icon" aria-hidden="true">🔌</div>
-          <h3>API &amp; SDK Documentation</h3>
-          <p>
-            Developer-grade API references and SDK guides — structured with OpenAPI specs, code samples,
-            authentication flows, and error handling references that developers bookmark, not ignore.
-          </p>
-          <div class="skill-tags">
-            <span class="tag">REST APIs</span>
-            <span class="tag">OpenAPI / Swagger</span>
-            <span class="tag">SDK Guides</span>
-            <span class="tag">Code Samples</span>
-          </div>
-        </article>
-
-        <article class="skill-card" aria-label="Doc-as-Code Workflows">
-          <div class="skill-icon" aria-hidden="true">⚙️</div>
-          <h3>Doc-as-Code &amp; Automation</h3>
-          <p>
-            Docs that live where engineers work: Markdown + Git + CI/CD pipelines. I design and
-            implement automated documentation workflows that keep content in sync with every
-            product release.
-          </p>
-          <div class="skill-tags">
-            <span class="tag">Markdown</span>
-            <span class="tag">Git / GitHub</span>
-            <span class="tag">CI/CD Pipelines</span>
-            <span class="tag">Static Site Generators</span>
-          </div>
-        </article>
-
-        <article class="skill-card" aria-label="Content Strategy">
-          <div class="skill-icon" aria-hidden="true">🗺️</div>
-          <h3>Content Strategy</h3>
-          <p>
-            Defining the documentation roadmap for entire product lines — from content audits and
-            gap analysis to taxonomy, versioning strategy, and documentation governance frameworks.
-          </p>
-          <div class="skill-tags">
-            <span class="tag">Content Audits</span>
-            <span class="tag">Gap Analysis</span>
-            <span class="tag">Versioning Strategy</span>
-            <span class="tag">Governance</span>
-          </div>
-        </article>
-
-        <article class="skill-card" aria-label="Information Architecture">
-          <div class="skill-icon" aria-hidden="true">🏗️</div>
-          <h3>Information Architecture</h3>
-          <p>
-            Structuring documentation so user personas find the right answer on the first click.
-            I map user journeys, build IA models, and validate navigation with real user feedback.
-          </p>
-          <div class="skill-tags">
-            <span class="tag">IA Design</span>
-            <span class="tag">User Personas</span>
-            <span class="tag">User Journey Mapping</span>
-            <span class="tag">Navigation Design</span>
-          </div>
-        </article>
-
-        <article class="skill-card" aria-label="SEO and AEO optimised content">
-          <div class="skill-icon" aria-hidden="true">🔍</div>
-          <h3>SEO &amp; AEO-Optimised Content</h3>
-          <p>
-            Writing content in semantic, modular chunks — structured for both search engine indexing
-            and AI retrieval (AEO). Docs that answer questions directly, whether the reader is human
-            or an AI assistant.
-          </p>
-          <div class="skill-tags">
-            <span class="tag">Semantic Chunking</span>
-            <span class="tag">Structured Data</span>
-            <span class="tag">AEO</span>
-            <span class="tag">AI-Readable Docs</span>
-          </div>
-        </article>
-
+      <div class="skill-card">
+        <div class="skill-icon">📄</div>
+        <h3>SaaS Technical Documentation</h3>
+        <p>End-to-end documentation for SaaS products: installation guides, configuration walkthroughs, feature references, and release notes — written for real users, not internal developers.</p>
+        <div class="tags">
+          <span class="tag">Install Guides</span>
+          <span class="tag">Config Docs</span>
+          <span class="tag">Feature Docs</span>
+          <span class="tag">Release Notes</span>
+        </div>
       </div>
-    </div>
-  </section>
 
-  <!-- ─────────── EXPERTISE ─────────── -->
-  <section id="expertise" aria-label="Areas of expertise">
-    <div class="container">
-      <div class="section-label">Expertise</div>
-      <h2 class="section-heading">Tools, Formats &amp; Domains</h2>
-      <p class="section-sub">Technologies and domains I work with day-to-day.</p>
-
-      <div class="expertise-grid">
-        <div class="expertise-item"><span>SaaS Product Documentation</span></div>
-        <div class="expertise-item"><span>REST API Reference Documentation</span></div>
-        <div class="expertise-item"><span>SDK Integration Guides</span></div>
-        <div class="expertise-item"><span>OpenAPI / Swagger Specification</span></div>
-        <div class="expertise-item"><span>Markdown &amp; reStructuredText</span></div>
-        <div class="expertise-item"><span>Git &amp; GitHub / GitLab Workflows</span></div>
-        <div class="expertise-item"><span>Static Site Generators (Docusaurus, MkDocs, Hugo)</span></div>
-        <div class="expertise-item"><span>DITA &amp; Structured Authoring</span></div>
-        <div class="expertise-item"><span>Confluence, Notion &amp; Wiki Platforms</span></div>
-        <div class="expertise-item"><span>User Journey &amp; Persona Mapping</span></div>
-        <div class="expertise-item"><span>Technical Gap Identification</span></div>
-        <div class="expertise-item"><span>SEO Metadata &amp; Structured Data (JSON-LD)</span></div>
+      <div class="skill-card">
+        <div class="skill-icon">🔌</div>
+        <h3>API &amp; SDK Documentation</h3>
+        <p>Developer-grade API references and SDK guides — structured with OpenAPI specs, code samples, authentication flows, and error handling references that developers bookmark, not ignore.</p>
+        <div class="tags">
+          <span class="tag">REST APIs</span>
+          <span class="tag">OpenAPI / Swagger</span>
+          <span class="tag">SDK Guides</span>
+          <span class="tag">Code Samples</span>
+        </div>
       </div>
-    </div>
-  </section>
 
-  <!-- ─────────── CTA ─────────── -->
-  <section id="cta" aria-label="Contact">
-    <div class="container" style="text-align:center;">
-      <div class="section-label" style="background:rgba(255,255,255,.15); color:#fff;">Let's Work Together</div>
-      <h2 style="font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight:800; margin-bottom:.8rem; color:#fff;">Your Documentation Deserves Better</h2>
-      <p style="color:rgba(255,255,255,.8); font-size:1rem; margin-bottom:2rem; max-width:480px; margin-left:auto; margin-right:auto;">
-        Whether you need a single doc revamp or an end-to-end documentation strategy,
-        let's talk about how I can help your team ship clearer, smarter content.
-      </p>
-      <div class="cta-links">
-        <a href="mailto:christu.rj@gmail.com" class="btn btn-white">✉️ Email Me</a>
-        <a href="https://github.com/chrisjohn83" class="btn btn-outline-white" target="_blank" rel="noopener">GitHub Profile</a>
+      <div class="skill-card">
+        <div class="skill-icon">⚙️</div>
+        <h3>Doc-as-Code &amp; Automation</h3>
+        <p>Docs that live where engineers work: Markdown + Git + CI/CD pipelines. I design and implement automated documentation workflows that keep content in sync with every product release.</p>
+        <div class="tags">
+          <span class="tag">Markdown</span>
+          <span class="tag">Git / GitHub</span>
+          <span class="tag">CI/CD Pipelines</span>
+          <span class="tag">Static Site Generators</span>
+        </div>
       </div>
-    </div>
-  </section>
 
-  <!-- ─────────── FOOTER ─────────── -->
-  <footer role="contentinfo">
-    <div class="container">
-      <p>
-        &copy; 2026 <strong style="color:rgba(255,255,255,.85)">Christu Raj</strong> &nbsp;·&nbsp;
-        Senior Technical Writer &nbsp;·&nbsp;
-        <a href="mailto:christu.rj@gmail.com">christu.rj@gmail.com</a>
-      </p>
+      <div class="skill-card">
+        <div class="skill-icon">🗺️</div>
+        <h3>Content Strategy</h3>
+        <p>Defining the documentation roadmap for entire product lines — from content audits and gap analysis to taxonomy, versioning strategy, and documentation governance frameworks.</p>
+        <div class="tags">
+          <span class="tag">Content Audits</span>
+          <span class="tag">Gap Analysis</span>
+          <span class="tag">Versioning Strategy</span>
+          <span class="tag">Governance</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-icon">🏗️</div>
+        <h3>Information Architecture</h3>
+        <p>Structuring documentation so user personas find the right answer on the first click. I map user journeys, build IA models, and validate navigation with real user feedback.</p>
+        <div class="tags">
+          <span class="tag">IA Design</span>
+          <span class="tag">User Personas</span>
+          <span class="tag">User Journey Mapping</span>
+          <span class="tag">Navigation Design</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-icon">🔍</div>
+        <h3>SEO &amp; AEO-Optimised Content</h3>
+        <p>Writing content in semantic, modular chunks — structured for both search engine indexing and AI retrieval (AEO). Docs that answer questions directly, whether the reader is human or an AI assistant.</p>
+        <div class="tags">
+          <span class="tag">Semantic Chunking</span>
+          <span class="tag">Structured Data</span>
+          <span class="tag">AEO</span>
+          <span class="tag">AI-Readable Docs</span>
+        </div>
+      </div>
+
     </div>
-  </footer>
+  </div>
+</section>
+
+<!-- ── Expertise ── -->
+<section id="expertise">
+  <div class="container">
+    <span class="section-tag">Expertise</span>
+    <h2 class="section-title">Tools, Formats &amp; Domains</h2>
+    <p class="section-sub">Technologies and domains I work with day-to-day.</p>
+    <div class="expertise-grid">
+      <span class="expertise-item">SaaS Product Documentation</span>
+      <span class="expertise-item">REST API Reference Documentation</span>
+      <span class="expertise-item">SDK Integration Guides</span>
+      <span class="expertise-item">OpenAPI / Swagger Specification</span>
+      <span class="expertise-item">Markdown &amp; reStructuredText</span>
+      <span class="expertise-item">Git &amp; GitHub / GitLab Workflows</span>
+      <span class="expertise-item">Static Site Generators (Docusaurus, MkDocs, Hugo)</span>
+      <span class="expertise-item">DITA &amp; Structured Authoring</span>
+      <span class="expertise-item">Confluence, Notion &amp; Wiki Platforms</span>
+      <span class="expertise-item">User Journey &amp; Persona Mapping</span>
+      <span class="expertise-item">Technical Gap Identification</span>
+      <span class="expertise-item">SEO Metadata &amp; Structured Data (JSON-LD)</span>
+    </div>
+  </div>
+</section>
+
+<!-- ── Projects ── -->
+<section id="projects">
+  <div class="container">
+    <span class="section-tag">Sample Projects</span>
+    <h2 class="section-title">Documentation in Action</h2>
+    <p class="section-sub">Real-world documentation projects showcasing Doc-as-Code workflows, API references, SDK guides, and structured authoring pipelines.</p>
+    <div class="projects-grid">
+
+      <!-- Project 1: Kubernetes Deployment Platform -->
+      <div class="project-card">
+        <div class="project-header">
+          <span class="project-icon">☸️</span>
+          <p class="project-type">DevOps · Doc-as-Code · MkDocs</p>
+          <h3>Kubernetes Deployment Platform</h3>
+        </div>
+        <div class="project-body">
+          <p>End-to-end documentation for a production-grade Kubernetes deployment platform. Covers cluster setup through monitoring and secrets management — built with MkDocs Material and hosted via GitHub Pages.</p>
+          <div class="project-tags">
+            <span class="project-tag">Kubernetes</span>
+            <span class="project-tag">Helm Charts</span>
+            <span class="project-tag">CI/CD</span>
+            <span class="project-tag">MkDocs</span>
+          </div>
+          <ul class="project-features">
+            <li>Quick-start guide &amp; cluster setup</li>
+            <li>Helm Charts &amp; CI/CD pipeline docs</li>
+            <li>Autoscaling, monitoring &amp; rollbacks</li>
+            <li>Secrets management reference</li>
+          </ul>
+        </div>
+        <div class="project-footer">
+          <a href="https://chrisjohn83.github.io/kubernetes-deployment-platform/" target="_blank" rel="noopener" class="project-btn project-btn-primary">View Docs ↗</a>
+          <a href="https://github.com/chrisjohn83/kubernetes-deployment-platform" target="_blank" rel="noopener" class="project-btn project-btn-outline">GitHub</a>
+        </div>
+      </div>
+
+      <!-- Project 2: DITA / Connected Car Docs -->
+      <div class="project-card">
+        <div class="project-header">
+          <span class="project-icon">🚗</span>
+          <p class="project-type">Developer Portal · DITA · Docusaurus</p>
+          <h3>Connected Car Developer Portal</h3>
+        </div>
+        <div class="project-body">
+          <p>A structured DITA-to-Markdown documentation pipeline powering a full Connected Car developer portal. Built with Docusaurus v3 and demonstrates how DITA topics, tasks, and API references can be delivered as a modern static site.</p>
+          <div class="project-tags">
+            <span class="project-tag">DITA</span>
+            <span class="project-tag">Docusaurus</span>
+            <span class="project-tag">Fleet APIs</span>
+            <span class="project-tag">Markdown Pipeline</span>
+          </div>
+          <ul class="project-features">
+            <li>Architecture &amp; overview documentation</li>
+            <li>Fleet API reference (REST endpoints)</li>
+            <li>Connectivity testing task guide</li>
+            <li>DITA → Markdown automated pipeline</li>
+          </ul>
+        </div>
+        <div class="project-footer">
+          <a href="https://chrisjohn83.github.io/dita-markdown-pipeline/" target="_blank" rel="noopener" class="project-btn project-btn-primary">View Docs ↗</a>
+          <a href="https://github.com/chrisjohn83/dita-markdown-pipeline" target="_blank" rel="noopener" class="project-btn project-btn-outline">GitHub</a>
+        </div>
+      </div>
+
+      <!-- Project 3: Kognifai SDK -->
+      <div class="project-card">
+        <div class="project-header">
+          <span class="project-icon">🏭</span>
+          <p class="project-type">Industrial IoT · SDK Docs · Open Source</p>
+          <h3>Kognifai Industrial IoT SDK</h3>
+        </div>
+        <div class="project-body">
+          <p>SDK documentation for Kognifai — KONGSBERG's open industrial digital platform. Covers the full ecosystem: IoT connectivity, the Galore time-series database, and the Poseidon Next web framework for building industrial applications.</p>
+          <div class="project-tags">
+            <span class="project-tag">IoT Platform</span>
+            <span class="project-tag">SDK Docs</span>
+            <span class="project-tag">Time Series DB</span>
+            <span class="project-tag">Open Source</span>
+          </div>
+          <ul class="project-features">
+            <li>IoT platform architecture &amp; connector SDK</li>
+            <li>Galore time-series database (TQL reference)</li>
+            <li>Poseidon Next web application framework</li>
+            <li>Edge &amp; cloud deployment documentation</li>
+          </ul>
+        </div>
+        <div class="project-footer">
+          <a href="https://github.com/chrisjohn83/Kognifai" target="_blank" rel="noopener" class="project-btn project-btn-primary">View on GitHub ↗</a>
+          <a href="https://github.com/chrisjohn83/Kognifai/blob/master/Getting%20Started%20with%20Kognifai.md" target="_blank" rel="noopener" class="project-btn project-btn-outline">Getting Started</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section id="cta">
+  <div class="container">
+    <span class="section-tag">Let's Work Together</span>
+    <h2 class="section-title">Your Documentation Deserves Better</h2>
+    <p>Whether you need a single doc revamp or an end-to-end documentation strategy, let's talk about how I can help your team ship clearer, smarter content.</p>
+    <div class="cta-btns">
+      <a href="mailto:christu.rj@gmail.com" class="btn btn-primary">✉️ Email Me</a>
+      <a href="https://github.com/chrisjohn83" target="_blank" rel="noopener" class="btn btn-outline">GitHub Profile</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ── -->
+<footer>
+  © 2026 <strong>Christu Raj</strong> · Senior Technical Writer · <a href="mailto:christu.rj@gmail.com">christu.rj@gmail.com</a>
+</footer>
 
 </body>
 </html>
